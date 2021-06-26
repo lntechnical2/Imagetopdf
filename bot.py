@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 from pyrogram import Client,filters 
-from pyrogram.types import (    InlineKeyboardButton,  InlineKeyboardMarkup)
+from pyrogram.types import (InlineKeyboardButton,  InlineKeyboardMarkup)
 
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 
@@ -10,7 +10,7 @@ from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 TOKEN = os.environ.get("TOKEN","")
 API_ID = int(os.environ.get("API_ID",12345))
 API_HASH = os.environ.get("API_HASH","")
-CHANNEL = os.environ.get("CHANNEL","")
+
 app = Client(
         "pdfbot",
         bot_token=TOKEN,
@@ -36,15 +36,7 @@ This bot created by @mrlokaman""",reply_to_message_id = message.message_id ,  re
 
 @app.on_message(filters.private & filters.photo)
 async def pdf(client,message):
- update_channel = CHANNEL
- user_id = message.from_user.id
- if update_channel :
-  try:
-   await client.get_chat_member(update_channel, user_id)
-  except UserNotParticipant:
-   await message.reply_text("**__You are not subscribed my channel__** ",parse_mode="markdown", reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{CHANNEL}") ]
-   ]))
-   return
+ 
  if not isinstance(LIST.get(message.from_user.id), list):
    LIST[message.from_user.id] = []
 
