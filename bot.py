@@ -14,7 +14,7 @@ CHANNEL = os.environ.get("CHANNEL","")
 app = Client(
         "pdfbot",
         bot_token=TOKEN,
-        api_id=APP_ID,
+        api_id=API_ID,
         api_hash=API_HASH)
 
 LIST = {}
