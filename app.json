@@ -1,0 +1,22 @@
+{
+    "name": "Image To Pdf Bot",
+    "description": "This Bot Converting Image To Pdf ",
+    "repository": "https://github.com/lntechnical2/iamgetopdfbot",
+    "keywords": ["Pdf ", "pyrogram", "telegram bot"],
+    "env": {
+        "TOKEN": {
+            "description": "Your Bot token from @Botfather"
+        },
+        "APP_ID": {
+            "description": "Your API_ID from https://my.telegram.org/apps"
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from https://my.telegram.org/apps"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
