@@ -6,7 +6,7 @@ from pyrogram.types import (InlineKeyboardButton,  InlineKeyboardMarkup)
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 
 app = Client("pdfbot",
-              bot_token = os.environ["BOT_TOKEN"],
+              bot_token = os.environ["TOKEN"],
               api_id = int(os.environ["API_ID"]),
               api_hash = os.environ["API_HASH"]
             )
