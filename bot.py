@@ -7,7 +7,7 @@ from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 
 TOKEN = os.environ.get("TOKEN", "")
 
-APP_ID = int(os.environ.get("APP_ID", 12345))
+API_ID = int(os.environ.get("API_ID", 12345))
 
 API_HASH = os.environ.get("API_HASH", "")
 app = Client(
